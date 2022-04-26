@@ -82,6 +82,8 @@ body {
 
 // .header__logo {}
 
+/*-----------------------------------*/
+
 .header__menu {
     flex: 1 1 auto;
 }
@@ -90,9 +92,10 @@ body {
     flex: 0 0 252px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
-
+/*-----------------------------------*/
 .menu {
     display: flex;
     justify-content: flex-end;
@@ -115,6 +118,8 @@ body {
     color: #000;
     letter-spacing: 0.14em;
 }
+
+/*-----------------------------------*/
 
 .button {
     display: inline-block;
@@ -141,6 +146,35 @@ body {
 .button_blue:hover{
     background-color: #3970c9;
 }
+
+/*-----------------------------------*/
+.icon-menu{
+    display: none;
+}
+@media (max-width: 767.98px) {
+    .icon-menu{
+        position: relative;
+        flex: 0 0 30px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    
+    .icon-menu::before,
+    .icon-menu::after{
+        content: "";
+        background-color: #000;
+        height: 2px;
+    }
+    
+    .icon-menu span{
+        height: 2px;
+        background-color: #000;
+    }
+}
+
 
 // PC
 @media (max-width: 1057px) {
@@ -173,5 +207,22 @@ body {
 @media (max-width: 767.98px) {
     [class*="__container"] {
         max-width: none;
+    }
+
+    .icon-menu{
+        display: flex;
+    }
+
+    .menu__body{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header__logo{
+        flex: 0 0 40px;
+        overflow: hidden;
     }
 }
