@@ -60,8 +60,9 @@ body {
 }
 
 [class*="__container"] {
-    max-width: 1057px;
+    max-width: 1087px;
     margin: 0px auto;
+    padding: 0 15px;
 }
 
 
@@ -79,7 +80,7 @@ body {
     align-items: center;
 }
 
-.header__logo {}
+// .header__logo {}
 
 .header__menu {
     flex: 1 1 auto;
@@ -141,4 +142,36 @@ body {
     background-color: #3970c9;
 }
 
-@media (max-width: 768px) {}
+// PC
+@media (max-width: 1057px) {
+    [class*="__container"] {
+        max-width: 970px;
+        // margin: 0px auto;
+        // padding: 0 15px;
+    }
+}
+
+// Tablet
+@media (max-width: 991.98px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+
+    .header__container {
+        min-height: 80px;
+    }
+    .header__button {
+        flex: 0 0 170px;
+    }
+
+    .menu__item {
+        margin-right: 30px;
+    }
+}
+
+// Mobile
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        max-width: none;
+    }
+}
