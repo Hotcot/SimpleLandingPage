@@ -122,6 +122,10 @@ body {
     letter-spacing: 0.14em;
 }
 
+.menu__link:hover {
+    text-decoration: underline;
+}
+
 /*-----------------------------------*/
 
 .button {
@@ -151,11 +155,12 @@ body {
 }
 
 /*-----------------------------------*/
+.close-icon-menu,
 .icon-menu{
     display: none;
 }
 @media (max-width: 767.98px) {
-    .icon-menu{
+    .icon-menu {
         position: relative;
         flex: 0 0 30px;
         height: 18px;
@@ -166,15 +171,46 @@ body {
     }
     
     .icon-menu::before,
-    .icon-menu::after{
+    .icon-menu::after {
         content: "";
         background-color: #000;
         height: 2px;
     }
     
-    .icon-menu span{
+    .icon-menu span {
         height: 2px;
         background-color: #000;
+    }
+
+    .close-icon-menu{
+        flex: 0 0 30px;
+        height: 30px;
+        position: relative;
+        margin-left: 20px;
+
+    }
+    .close-icon-menu::before,
+    .close-icon-menu::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        height: 2px;
+    }
+    .close-icon-menu::before{
+        transform: rotate(-45deg);
+    }
+    .close-icon-menu::after{
+        transform: rotate(45deg);
+    }
+
+    .header:target .icon-menu{
+        display: none;
+    }
+    .header:target .close-icon-menu{
+        display: flex;
     }
 }
 
@@ -183,8 +219,6 @@ body {
 @media (max-width: 1057px) {
     [class*="__container"] {
         max-width: 970px;
-        // margin: 0px auto;
-        // padding: 0 15px;
     }
 }
 
@@ -219,11 +253,25 @@ body {
     .menu__body{
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         height: 100%;
+        overflow: auto;
         background-color: #fff;
         padding: 90px 15px 30px 15px;
+        transition: left 0.3s ease 0s;
+    }
+    .header:target .menu__body{
+        left: 0;
+    }
+    .header:target .menu__body::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 80px;
+        width: 100%;
+        background-color: #fff;
     }
     .menu__list{
         flex-direction: column;
