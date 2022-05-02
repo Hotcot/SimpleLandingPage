@@ -138,12 +138,12 @@ body {
     color: #FCFDFE;
     padding: 14px 30px;
     border-radius: 5px;
-    background-color: #EC5863;
+    background-color: #FFD500;
     transition: all 0.5s ease 0s;
 }
 
 .button:hover{
-    background-color: #d8565f;
+    background-color: #ebcb2c;
 }
 
 .button_blue {
@@ -295,5 +295,131 @@ body {
     .header__logo{
         flex: 0 0 40px;
         overflow: hidden;
+    }
+}
+
+
+
+/*  =====================================================================*/
+.block-text {
+
+    // .block-text__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 126%;
+        color: #000;
+        // .block-text__title_blue
+
+        span{
+            color: #FFD500;
+        }
+        &_blue span {
+            color: #4285F4;
+        }
+        &:not(:last-child){
+            margin: 0px 0px 12px 0px;
+        }
+    }
+    
+
+    // .block-text__text
+
+    &__text {
+        line-height: 138.5%;
+
+        &:not(:last-child){
+            margin: 0px 0px 24px 0px;
+        }
+    }
+
+    // .block-text__button
+
+    &__button {
+    }
+}
+/*  =====================================================================*/
+
+
+
+
+.get-started {
+    background-color: #FAFBFD;
+    padding: 150px 0px 50px 0px;
+    // .get-started__container
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    // .get-started__content
+
+    &__content {
+        flex: 0 1 48%;
+        padding: 0px 0px 0px 20px;
+    }
+
+    // .get-started__block-text
+
+    &__block-text {
+        max-width: 410px;
+    }
+
+    // .get-started__video
+
+    &__video {
+        flex: 1 1 100%;
+        padding: 60px 0px 0px 20px;
+    }
+
+    // .get-started__image
+
+    &__image {
+        flex: 0 1 52%;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.video-get-started {
+    display: inline-flex;
+    align-items: center;
+
+    // .video-get-started__icon
+
+    &__icon {
+        flex: 0 0 44px;
+    }
+
+    // .video-get-started__body
+
+    &__body {
+        padding: 0px 0px 0px 12px;
+    }
+
+    // .video-get-started__title
+
+    &__title {
+        color: #B0B0B0;
+        font-size: 13px;
+        line-height: 126%;
+        letter-spacing: 0.08em;
+
+        &:not(:last-child){
+            margin: 0px 0px 5px 0px;
+        }
+    }
+
+    // .video-get-started__text
+
+    &__text {
+        font-size: 9px;
+        line-height: 126%;
+        letter-spacing: 0.165em;
+        text-transform: uppercase;
     }
 }
