@@ -644,3 +644,118 @@ body {
     
 }
 
+
+
+
+/*  =====================================================================*/
+
+.experts {
+    background-color: #FAFBFD;
+    padding: 103px 0px 116px 0px;
+    // .experts__container
+
+    &__container {
+    }
+
+    // .experts__statistics
+
+    &__statistics {
+    }
+}
+.statistics-experts {
+    max-width: 655px;
+    margin: 0px auto;
+
+    position: relative;
+    // .statistics-experts__body
+
+    &__body {
+        position: relative;
+        z-index: 2;
+    background-color: #fff;
+
+        box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+        border-radius: 16px;
+    }
+
+    // .statistics-experts__decor
+
+    &__decor {
+        position: absolute;
+        background-color: #FFD500;
+        border-radius: 30px;
+
+        // .statistics-experts__decor_1
+
+        &_1 {
+            width: 65px;
+            height: 65px;
+            transform: rotate(-30deg);
+            border-radius: 16px;
+            bottom: -21px;
+            left: -21px;
+        }
+
+        // .statistics-experts__decor_2
+
+        &_2 {
+            width: 97px;
+            height: 97px;
+            right: 50%;
+            top: -40px;
+            transform: rotate(105deg);
+        }
+
+        // .statistics-experts__decor_3
+
+        &_3 {
+            width: 128px;
+            height: 128px;
+            right: -65px;
+            top: 0;
+            transform: rotate(-30deg);
+        }
+    }
+}
+.body-statistics-experts {
+
+    padding: 25px 80px;
+    display: flex;
+    align-items: center;
+    // .body-statistics-experts__item
+
+    &__item {
+        flex: 0 1 25%;
+        text-align: center;
+
+        &:last-child {
+            flex: 0 1 50%;
+        }
+    }
+
+    // .body-statistics-experts__value
+
+    &__value {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.2;
+
+        letter-spacing: 0.14em;
+        color: #4285F4;
+        margin-bottom: 5px;
+    }
+
+    // .body-statistics-experts__text
+
+    &__text {
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 1.8;
+
+        letter-spacing: 0.37em;
+        text-transform: uppercase;
+        color: #000000;
+    }
+}
+
+
